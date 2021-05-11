@@ -15,10 +15,7 @@ async function getFetch(){
 
 
 
-let myArray =[]
-for (let hits of Object.values(foodItemData.hits)){
-    myArray.push(hits.recipe.label)
-    for (let recipe of Object.values(hits.recipe)){
+
 
  function createCard(foodItemData){
     document.querySelector("#content").innerHTML = `
@@ -34,8 +31,8 @@ for (let hits of Object.values(foodItemData.hits)){
         </div>`
  }
 
-}
-}
+
+
  
 
 // let myArray =[]
