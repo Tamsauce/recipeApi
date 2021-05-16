@@ -1,11 +1,12 @@
-document.querySelector('button').addEventListener('click', getFetch)
+document.querySelector('#search').addEventListener('click', getFetch)
 
 async function getFetch(){
     try{
-        const userChoice = document.querySelector('input').value
+        const userChoice = document.querySelector('#searchTerm').value
         const url = `https://api.edamam.com/search?q=${userChoice}&app_id=%efe3aba1%`
         const foodItem = await fetch(url)
         const foodItemData = await foodItem.json()
+        console.log(foodItemData)
         createCard(foodItemData)
         
     }catch (err){
@@ -97,71 +98,22 @@ function createCard(foodItemData){
             <a href="${foodItemData.hits[6].recipe.url}" class="btn btn-primary">Click for full recipe</a>
         </div>
         </div>`
+
+        document.querySelector("#recipe8").innerHTML = `
+        <div class="card" style="width: 18rem;">
+        <img src="${foodItemData.hits[7].recipe.image}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">${foodItemData.hits[7].recipe.label}</h5>
+            <li class="card-text">${foodItemData.hits[7].recipe.ingredientLines[0]}</li>
+            <li class="card-text">${foodItemData.hits[7].recipe.ingredientLines[1]}</li>
+            <li class="card-text">${foodItemData.hits[7].recipe.ingredientLines[2]}</li>
+            <a href="${foodItemData.hits[7].recipe.url}" class="btn btn-primary">Click for full recipe</a>
+        </div>
+        </div>`
+
+        
  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-//  function createCard(foodItemData){
-
-
-
-
- 
-// for (let hits of Object.values(foodItemData.hits)){
-//     labelThing.push(hits.recipe.label)
-//     imageThing.push(hits.recipe.image)
-//     urlThing.push(hits.recipe.url)
-//     ingredientLinesThing.push(hits.recipe.ingredientLines)
-//     for (let recipe of Object.values(hits.recipe)){
-// }
-//     document.querySelector("#content").innerHTML = `
-//         <div class="card" style="width: 18rem;">
-//         <img src="${imageThing}" class="card-img-top" alt="...">
-//         <div class="card-body">
-//             <h5 class="card-title">${labelThing}</h5>
-            
-//             <a href="${urlThing}" class="btn btn-primary">Click for full recipe</a>
-//         </div>
-//         </div>`
-// }
-//     console.log(labelThing)
-//     console.log(imageThing)
-//     console.log(urlThing)
-//     console.log(ingredientLinesThing)
-
-// }
-
-
-
-
-
-// function createRecipeCard(){
-//     let recipe1Label = foodItemData.hits[0].recipe.label
-//     class RecipeStuff{
-//         constructor (label){
-//             this.label = label; 
-//             // this.image = image; 
-//             // this.ingredientLines = ingredientLines; 
-//             // this.url = url
-//         }
-//     }
-//     const recipe1 = new RecipeStuff(recipe1Label)
-//     console.log(recipe1)
-
-
-
-
-// }
 
 
 
