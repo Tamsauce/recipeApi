@@ -57,12 +57,14 @@ h1 {
 .split.left .btn:hover{
     background-color: var(--left-btn-hover-color);
     border-color: var(--left-btn-hover-color);
+    border: rgb(40,63,11) solid 0.2rem;
 }
 
 
 .split.right .btn:hover{
     background-color: var(--right-btn-hover-color);
     border-color: var(--right-btn-hover-color);
+    border: rgb(20,72,90) solid 0.2rem;
 }
 
 .container {
