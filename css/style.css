@@ -8,21 +8,21 @@
 
 body{
   font-family: montserrat;
-  background: url("../images/table1.jpg") no-repeat;
+  background: url("../images/index14.jpg") no-repeat;
   background-size: cover;
   height: calc(100vh - 80px);
   background-attachment: fixed;
 }
 
 .roulette{
-  background: url("../images/roulette1.jpg") no-repeat;
+  background: url("../images/roulette4.jpg") no-repeat;
   background-size: cover;
   /* height: calc(100vh - 80px); */
   background-attachment: fixed;
 }
 
 .cocktails{
-  background: url("../images/cocktail3.jpg") no-repeat;
+  background: url("../images/cocktail4.jpg") no-repeat;
   background-size: cover;
   /* height: calc(100vh - 80px); */
   background-attachment: fixed;
@@ -72,8 +72,9 @@ nav ul li a{
   text-transform: uppercase;
 }
 a.active,a:hover{
-  background: rgb(45,154,192);
+  background: rgb(37,47,73);
   transition: .5s;
+  color: white
 }
 .checkbtn{
   font-size: 30px;
@@ -120,7 +121,7 @@ a.active,a:hover{
   }
   a:hover,a.active{
     background: none;
-    color: #0082e6;
+    color: rgb(37,47,73);
   }
   #check:checked ~ ul{
     left: 0;
@@ -164,5 +165,17 @@ a.active,a:hover{
   }
   /* end of scrollbar */
 
+.recipeSearch {
+  background-color: rgb(37,47,73, 9);
+  width: 20%;
+  border-radius: 5px;
+  margin-left: 3%;
+  color: white;
 
+
+}
+
+.searchTerm {
+  padding: 20%
+}
   
