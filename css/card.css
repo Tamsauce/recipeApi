@@ -32,7 +32,7 @@ body{
 
 .card::before {    
     content: "";
-    background-image: url('../images/card.jpg');
+    background-image: url('../images/card3.jpg');
     background-size: cover;
     position: absolute;
     top: 0px;
