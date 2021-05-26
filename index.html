@@ -15,15 +15,13 @@
   </head>
 
   <body>
-      <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo"><img src="/images/logo2.png" width="39%"></label>
-
-        
-        <ul>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      
+      <ul>
           <li><a class="active" href="/index.html">Home</a></li>
           <li><a href="/roulette.html">Recipe Roulette</a></li>
           <li><a href="/cocktails.html">Cocktails</a></li>
@@ -31,13 +29,31 @@
         </ul>
       </nav>
       
-      <div>
 
-        <div class="recipeSearch">
-          <h1>Enter in an item</h1>
-          <input id="searchTerm" type="text" placeholder="Enter search term"/>
-          <button id="search">Search</button>
+
+      <!-- seach area  -->
+<div class="searchContainer">
+  <div class="logoContainer"><img class="miniLogo" src="/images/logoMini.PNG" alt=""> <img class="logo" src="/images/logo2.PNG" width= "90%"></div>
+      <div class="row centerBox">
+        <div class="pronounce">
+          <h3>Recipe:</h3>
+          <h4><span>pronouced </span> /ˈresəˌpē/</h4>
+          <h5>(noun)</h5>
         </div>
+          <p>. . . . a set of cooking instructions to follow like that Ikea table you never build. Where an oppinion is never one of the ingredients but always seems to be added half way through.</p>
+          <input id="searchTerm" type="text" placeholder="Enter: Margherita Pizza"/>
+          <a class="button" id="getRecipe">Search Recipes</a>
+      </div>
+      <div  class="row meal"></div>
+</div>
+
+
+<div class="pageWidth">
+<div class="mainContainer" id="meal"></div>
+</div>
+
+<!-- end of search area (testing) -->
+
 
         <div class="mainContainer">
           <div id="recipe0"></div>
@@ -59,8 +75,8 @@
           
         </div>
 
-      </div>
-    
+  
+ 
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

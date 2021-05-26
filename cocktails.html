@@ -9,19 +9,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
-    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/roulette.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Recipe By Design</title>
   </head>
 
   <body class="cocktails">
-      <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo"><img src="/images/logo2.png" width="39%"></label>
-        <ul>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      
+      <ul>
           <li><a href="/index.html">Home</a></li>
           <li><a href="/roulette.html">Recipe Roulette</a></li>
           <li><a class="activeCocktail" href="/cocktails.html">Cocktails</a></li>
@@ -29,13 +29,30 @@
         </ul>
       </nav>
       
-      <div>
 
-        <div class="recipeSearch">
-          <h1>Enter in an item</h1>
-          <input id="searchTerm" type="text" placeholder="Enter search term"/>
-          <button id="search">Search</button>
+<!-- seach area  -->
+ <div class="searchContainer">
+      <div class="logoContainer"><img class="miniLogo" src="/images/logoMini.PNG" alt=""> <img class="logo" src="/images/logo2.PNG" width= "90%"></div>
+       <div class="row centerBox">
+         <div class='pronounce'>
+          <h3>Cocktail:</h3>
+          <h4><span>pronouced </span> /'ˈkäkˌtāl/</h4>
+          <h5>(noun)</h5>
+         </div>
+          <p>. . . . an alcoholic drink usually consumed in the company of people you enjoy.  In low doses causes euphoria, reduced anxiety, and sociability and in higher doeses causes drunkeness, stupor and makes people believe they can dance.</p>
+          <input id="searchTerm" type="text" placeholder="Enter: Whiskey, Margarita"/>
+          <a class="button" id="search">Search Cocktails</a>
         </div>
+        <div  class="row meal"></div>
+  </div>
+
+
+  <div class="pageWidth">
+    <div class="mainContainer" id="meal"></div>
+  </div>
+
+<!-- end of search area (testing) -->
+
 
         <div class="mainContainer">
           <div id="recipe0"></div>
@@ -49,7 +66,7 @@
           
         </div>
 
-      </div>
+    
     
       <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
