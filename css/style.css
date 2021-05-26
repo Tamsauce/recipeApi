@@ -1,8 +1,82 @@
- *{
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box; 
  }
+
+.searchContainer {
+  position: fixed;
+  left: 0;
+  top:0;
+  bottom: 0;
+  width: 19%;
+  color: white;
+  background-color: rgb(37,47,73, 0.95);
+  display: flex;
+  flex-direction: column;
+ 
+}
+/* added button class*/
+.button{
+  text-align: center;
+}
+
+.centerBox {
+  padding: .9rem;
+}
+
+.searchContainer span {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.searchContainer  h3 {
+  margin-top: 3rem;
+  font-size: 2.20rem;
+  font-weight: bold;
+  text-align: left;
+
+}
+
+.searchContainer h4, .searchContainer p, .seachContainer h5 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.searchContainer .button, #searchTerm {
+  background: white;
+  color: #2c3e50;
+  padding: .3rem;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+#searchTerm {
+  width: 80%;
+  border: none;
+
+}
+
+
+.logoContainer {
+   display:flex;
+   justify-content: center;
+   margin-top: .625rem; 
+}
+
+
+.miniLogo{
+  display:none;
+}
+
+.pageWidth{
+  display:flex;
+  justify-content: center;
+  margin-left:20%;
+}
+
 
  /*start of background for each page*/
 
@@ -17,31 +91,26 @@ body{
 .roulette{
   background: url("../images/roulette4.jpg") no-repeat;
   background-size:cover;
-  /* height: calc(100vh - 80px); */
   background-attachment: fixed;
 }
 
 .cocktails{
   background: url("../images/cocktail4.jpg") no-repeat;
   background-size: cover;
-  /* height: calc(100vh - 80px); */
   background-attachment: fixed;
 }
 
 .contactUs{
   background: url("../images/contactUs1.jpg") no-repeat;
   background-size: cover;
-  /* height: calc(100vh - 80px);
-  background-attachment: fixed; */
 }
-
 
 /*end of background for each page*/
 
 
 
 
-/*start of navigation  for each page*/
+/*start of navigation for each page*/
 
 nav ul{
   float: right;
@@ -75,6 +144,7 @@ a.activeContact, a.activeCocktail,a:hover{
   background: white;
   transition: .5s;
   color:rgb(37,47,73);
+  
 }
 .checkbtn{
   font-size: 30px;
@@ -84,19 +154,61 @@ a.activeContact, a.activeCocktail,a:hover{
   margin-right: 40px;
   cursor: pointer;
   display: none;
+
+ 
 }
+
 #check{
   display: none;
+ 
 }
+
+.fa-bars {
+  position: relative;
+  z-index: 999;
+}
+
+/* end of navigation for each page */
+
+
+
+/* start of media queries  */
+
 @media (max-width: 952px){
-  label.logo{
-    font-size: 30px;
-    padding-left: 50px;
-  }
   nav ul li a{
     font-size: 16px;
   }
+  .rouletteSpan, .rouletteNoun{
+    display:none;
+  }
+
+  .searchContainer h3{
+    margin:0;
+    font-size: 1.8rem;
+  }
+
+ .miniLogo {
+    display: none;
+  }
+  
+  .logoContainer {
+    display:flex;
+    justify-content: center;
+    /* margin-top: .625rem; */
+    /* max-width: 150px;
+    max-height:150px; */
+    background-repeat: no-repeat;
+    margin: 0.6250em;
+  }
+
+  .logo{
+    display:flex;
+   justify-content: center;
+   margin-top: .625rem;
+  }
+
 }
+
 @media (max-width: 858px){
   .checkbtn{
     display: block;
@@ -105,8 +217,8 @@ a.activeContact, a.activeCocktail,a:hover{
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #2c3e50;
-    top: 80px;
+    background: rgb(37,47,73, 0.8);
+    top: 130px;
     left: -100%;
     text-align: center;
     transition: all .5s;
@@ -120,31 +232,134 @@ a.activeContact, a.activeCocktail,a:hover{
     font-size: 20px;
   }
   a:hover,a.active{
-    background: none;
+    background: rgb(255,255,255,0.8);
     color: rgb(37,47,73);
   }
   #check:checked ~ ul{
     left: 0;
+    
+  }
+  .rouletteSpan .rouletteNoun{
+    display:none;
+  }
+
+  .searchContainer {
+    width:100%;
+    max-height:20%;
+    flex-direction: row;
+  }
+
+  .centerBox {
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    padding: .2rem;
+
+  }
+
+  .centerBox h4, .centerBox h5, .centerBox p{
+    display: none;
+  }
+
+  .searchContainer span {
+    display:flex;
+    margin:0;
+  }
+  
+  .searchContainer h3 {
+    margin-top:.8rem;
+    margin-bottom:.3rem;
+    max-width:150px;
+    height: 30%;
+  }
+
+  .pronounce{
+    max-height:100%;
+    max-width:150px;
+    margin-left: 1rem;
+  }
+
+  .searchContainer p{
+    text-align:justify;
+    margin-top:3.5rem;
+    height:60%;
+    max-width:60%;
+  }
+
+  .searchContainer h4{
+    text-align:left;
+    margin-left:1.5rem;
+    margin-bottom: .4rem;
+  }
+
+   .searchContainer h5 {
+    text-align: left;
+    margin-left:1.5rem;
+   
+  }
+
+  .button{
+    height:20%;
+    max-width:150px;
+  }
+  #search{
+    margin:0 0 0 1.9rem;
+  }
+
+  #searchTerm {
+    height: 20%;
+    width: 50%;
+    margin: 0 0 1rem 1.9rem;
+  }
+
+  .logo {
+    display: none;
+  }
+  
+  .logoContainer {
+    max-width: 150px;
+    max-height:150px;
+    background-repeat: no-repeat;
+    margin: 0.6250em;
+  }
+
+  .miniLogo{
+    display:flex;
+    justify-content: center;
+  }
+
+}
+@media (max-width: 401px){
+  .miniLogo{
+    display:none;
+  }
+
+  .searchContainer h3 {
+    font-size: 1.25rem;
+  }
+
+  .searchContainer .button {
+    padding: 0;
+  }
+
+  ul {
+    top: 101px;
   }
 }
-/*end of navigation for each page*/
 
 
-/*start of cards for home and cocktail pages*/
-.btn{
-    background: black;
+@media (max-width: 401px){
+  ul {
+    top: 150px;
+  }
 }
 
-.mainContainer{
-    max-width: 750px;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+@media (max-width: 768px){
+  ul {
+    top: 200px;
+  }
 }
-
-/*end of cards for home and cocktail pages*/
+/*end of media queries for each page*/
 
 
 
@@ -164,14 +379,20 @@ a.activeContact, a.activeCocktail,a:hover{
   }
   /* end of scrollbar */
 
+
+
+
+
+
+
+/* dont delete yet  - needs to be moved  */
+
 .recipeSearch {
   background-color: rgb(37,47,73, 9);
   width: 20%;
   border-radius: 5px;
   margin-left: 3%;
   color: white;
-
-
 }
 
 .searchTerm {
