@@ -28,7 +28,7 @@ const createMeal = (meal) => {
 
 	
     const newInnerHTML = `
-    <div class="mainContainer">
+    <div class="secondContainer">
     <div class="recipe-card">
           <div style="background: url(${meal.strMealThumb})no-repeat 50% 50%;background-size: cover;
           height: 200px;
@@ -60,7 +60,7 @@ const createMeal = (meal) => {
             </div>` : ''}
           </div>
         </div>
-        </div>`
+      </div>`
     
         recipeContainer.innerHTML = newInnerHTML
     
@@ -84,8 +84,6 @@ const createMeal = (meal) => {
     
     
 }
-    
-    
     
     
     
