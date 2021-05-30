@@ -37,10 +37,10 @@ const createMeal = (meal) => {
             <h1 class="recipe-card__heading">${meal.strMeal}</h1>
             <ul class="recipe-card__nav">
               <li>
-                <h3 id="ingredientsActive">Ingredients</h3>
+                <h3 id="ingredientsActive" class="active">Ingredients</h3>
               </li>
               <li>
-                <h3 id="instructionsActive">Instructions</h3>
+                <h3 id="instructionsActive" >Instructions</h3>
               </li>
             </ul>
             <ul class="recipe-card__ingredients active" >
@@ -70,6 +70,8 @@ const createMeal = (meal) => {
     function showIngredients() {
         document.querySelector(".recipe-card__instructions").classList.add("hidden-element")
         document.querySelector(".recipe-card__ingredients").classList.remove("hidden-element")
+        document.querySelector("#instructionsActive").classList.remove("active")
+        document.querySelector("#ingredientsActive").classList.add("active")
     }
     
     
@@ -79,6 +81,8 @@ const createMeal = (meal) => {
     function showInstructions() {
         document.querySelector(".recipe-card__ingredients").classList.add("hidden-element")
         document.querySelector(".recipe-card__instructions").classList.remove("hidden-element")
+        document.querySelector("#ingredientsActive").classList.remove("active")
+        document.querySelector("#instructionsActive").classList.add("active")
     }
     
     
@@ -86,6 +90,12 @@ const createMeal = (meal) => {
 }
     
     
+    
+    
+    
+    
+
+
     
     
 
