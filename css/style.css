@@ -174,9 +174,9 @@ a.activeContact, a.activeCocktail,a:hover{
 
 /* start of media queries  */
 
-@media (max-width: 952px){
+@media (max-width: 978px){
   nav ul li a{
-    font-size: 16px;
+    font-size: 1rem;
   }
   .rouletteSpan, .rouletteNoun{
     display:none;
@@ -194,9 +194,6 @@ a.activeContact, a.activeCocktail,a:hover{
   .logoContainer {
     display:flex;
     justify-content: center;
-    /* margin-top: .625rem; */
-    /* max-width: 150px;
-    max-height:150px; */
     background-repeat: no-repeat;
     margin: 0.6250em;
   }
@@ -206,10 +203,6 @@ a.activeContact, a.activeCocktail,a:hover{
    justify-content: center;
    margin-top: .625rem;
   }
-
-}
-
-@media (max-width: 858px){
   .checkbtn{
     display: block;
   }
@@ -327,7 +320,6 @@ a.activeContact, a.activeCocktail,a:hover{
     display:flex;
     justify-content: center;
   }
-
 }
 @media (max-width: 401px){
   .miniLogo{
@@ -380,22 +372,3 @@ a.activeContact, a.activeCocktail,a:hover{
   /* end of scrollbar */
 
 
-
-
-
-
-
-/* dont delete yet  - needs to be moved  */
-
-.recipeSearch {
-  background-color: rgb(37,47,73, 9);
-  width: 20%;
-  border-radius: 5px;
-  margin-left: 3%;
-  color: white;
-}
-
-.searchTerm {
-  padding: 20%
-}
-  
